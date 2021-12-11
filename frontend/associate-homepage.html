@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Associate Home page</title>
+		<link rel="stylesheet" href="associate.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+		/>
+	</head>
+	<body>
+		<div id="receipt-image-modal" class="modal">
+			<div class="modal-background"></div>
+			<div class="modal-content"></div>
+			<button class="modal-close is-large" aria-label="close"></button>
+		</div>
+
+		<nav class="has-background-warning">
+			
+			<img class="logo" src="project1.jpg" alt="">
+			<h1
+				class="is-size-3 has-text-link headerh1"
+			>
+				Welcome to the Associate homepage
+			</h1>
+			<div style="position: relative">
+				<button id="logout" class="logout">Logout</button>
+			</div>
+		</nav>
+
+		<div id="homepage-grid">
+			<div id="reimbursements">
+				<h2 class="is-size-4 h2-header has-text-info-dark">Reimbursements</h2>
+				<div class="table-container">
+					<div class="search">
+						<label class="search-label">Search</label>
+						<div class="search-table-container">
+							<input
+								class="filter"
+								type="text"
+								id="myInput"
+								onkeyup="searchTable()"
+								placeholder="search"
+							/>
+						</div>
+					<table
+						class="table is-striped is-fullwidth is-hoverable"
+						id="reimbursement-table"
+					>
+						<thead class="has-background-primary">
+							<tr>
+								<th>Id</th>
+								<th>Amount</th>
+								<th>Submitted Date</th>
+								<th>Resolved Date</th>
+								<th>Status</th>
+								<th>ResolverId</th>
+								<th>Type</th>
+								<th>Description</th>
+								<th>AuthorId</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="submit-form" id="reimbursement-submit-form">
+				<h2 class="is-size-5 has-text-link">Submit New Reimbursement</h2>
+
+				<div>
+					<label for="reimbursement-type">Type:</label>
+					<input type="text" id="reimbursement-type" />
+				</div>
+				<div>
+					<label for="reimbursement-amount">Amount </label>
+					<input type="text" id="reimbursement-amount" />
+				</div>
+				<div>
+					<label for="description">Description</label>
+					<input type="text" id="description" />
+				</div>
+				<div>
+					<label for="reimbursement-file"
+						>Receipt Upload (JPEG, PNG, or GIF)</label
+					>
+					<input class="submit-btn" type="file" id="reimbursement-image" />
+				</div>
+
+				<div id="submit-info">
+					<button id="submit-reimbursement-btn">Submit Reimbursement</button>
+				</div>
+			</div>
+		</div>
+		<script>
+			function searchTable() {
+				var input, filter, found, table, tr, td, i, j;
+				input = document.getElementById("myInput");
+				filter = input.value.toUpperCase();
+				table = document.getElementById("reimbursement-table");
+				tr = table.getElementsByTagName("tr");
+				for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td");
+					for (j = 0; j < td.length; j++) {
+						if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+							found = true;
+						}
+					}
+					if (found) {
+						tr[i].style.display = "";
+						found = false;
+					} else {
+						tr[i].style.display = "none";
+					}
+				}
+			}
+		</script>
+
+		<script src="associate-homepage.js"></script>		
+	
+	</body>
+</html>

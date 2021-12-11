@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Financial Manager Homepage</title>
+		<link rel="stylesheet" href="manager.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+		/>
+	</head>
+	<body>
+		<div id="receipt-image-modal" class="modal">
+			<div class="modal-background"></div>
+			<div class="modal-content"></div>
+			<button class="modal-close is-large" aria-label="close"></button>
+		</div>
+
+		<div class="has-background-warning">
+			<img class="logo" src="project1.jpg" alt="project logo" />
+			<h1 class="is-size-3 has-text-link headerh1">
+				Welcome to the financial manager homepage
+			</h1>
+			<div class="logoutbtn">
+				<button id="logout" class="logout">Logout</button>
+			</div>
+		</div>
+		<div id="homepage-grid">
+			<div id="reimbursements">
+				<h2 class="is-size-4 has-text-info-dark h2-header">Reimbursements</h2>
+				<div>
+					<label class="search-label">Search</label>
+					<div class="search-table-container">
+						<input
+							class="filter"
+							type="text"
+							id="myInput"
+							onkeyup="searchTable()"
+							placeholder="search"
+						/>
+					</div>
+				</div>
+				<div class="table-container"></div>
+				<table
+					class="table is-striped is-hoverable is-fullwidth"
+					id="reimbursement-table"
+				>
+					<thead class="has-background-primary">
+						<tr>
+							<th>Id</th>
+							<th>Amount</th>
+							<th>Submitted Date</th>
+							<th>Resolved Date</th>
+							<th>Status</th>
+							<th>ResolverId</th>
+							<th>Type</th>
+							<th>Description</th>
+							<th>AuthorId</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
+		<!----
+		<script>
+			function searchTable() {
+				var input, filter, found, table, tr, td, i, j;
+				input = document.getElementById("myInput");
+				filter = input.value.toUpperCase();
+				table = document.getElementById("reimbursement-table");
+				tr = table.getElementsByTagName("tr");
+				for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td");
+					for (j = 0; j < td.length; j++) {
+						if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+							found = true;
+						}
+					}
+					if (found) {
+						tr[i].style.display = "";
+						found = false;
+					} else {
+						tr[i].style.display = "none";
+					}
+				}
+			}
+		</script> -->
+		<script src="manager-homepage.js"></script>
+	</body>
+</html>

@@ -1,0 +1,119 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#homepage-grid {
+	padding-left: 20px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+
+	grid-template-areas:
+		" reimbursement-display reimbursement-display submit-form"
+		" reimbursement-display reimbursement-display submit-form";
+}
+
+#reimbursements {
+	grid-area: reimbursement-display;
+}
+
+#user-submit-form {
+	grid-area: submit-form;
+	margin-left: 60px;
+	margin-top: 40px;
+}
+
+#user-submit-form div {
+	margin-top: 10px;
+}
+
+.submit-form {
+	align-content: center;
+	width: 200;
+	align-self: center;
+	display: block;
+}
+
+.h2-header {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.line1 {
+	margin-left: 80px;
+}
+
+.adduser {
+	margin-left: 400px;
+	align-content: center;
+	width: 130px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+label {
+	margin-left: 120px;
+}
+
+button {
+	background-color: #428bca;
+	color: #ffff;
+	font-size: 20px;
+}
+
+button:hover {
+	background-color: rgb(192, 140, 241);
+}
+button:focus {
+	color: red;
+}
+
+h2 {
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.headerh1 {
+	margin-left: 15%;
+}
+h1 {
+	display: inline;
+}
+.search-label {
+	margin-left: 5px;
+}
+.logoutbtn {
+	margin-top: 10px;
+}
+.filter {
+	height: 25px;
+}
+.h2-insert-text {
+	margin-top: 20px;
+}
+
+.logo {
+	padding-top: 10px;
+	width: 15%;
+	display: inline;
+}
+@media (max-width: 1100px) {
+	.homepage-grid {
+		display: grid;
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 900px) {
+	.homepage-grid {
+		display: grid;
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 700px) {
+	.homepage-grid {
+		display: grid;
+		font-size: 18px;
+	}
+}

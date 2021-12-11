@@ -1,0 +1,78 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.container {
+	/*	background-color: aliceblue; */
+	width: 550px;
+	height: auto;
+	margin-left: 70%;
+	margin-top: 100px;
+	margin-left: 400px;
+}
+
+.section1 {
+	margin-left: 140px;
+}
+.section2 {
+	margin-left: 140px;
+}
+
+.username-filed {
+	margin-bottom: 20px;
+}
+.password-field {
+	margin-bottom: 20px;
+}
+#login-info {
+	display: block;
+}
+.inputs {
+	font-size: 20px;
+}
+
+.section3 {
+	margin-left: 160px;
+}
+.mylogo {
+	width: 25%;
+	margin-left: 29%;
+}
+
+.login-btn {
+	margin-top: 30px;
+	margin-left: 50;
+	width: 180px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #ffff;
+	background-color: #428bca;
+	margin-bottom: 40px;
+}
+
+.p-label {
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.grid1 {
+	display: grid;
+	grid-template-columns: 1fr;
+	background-color: #ffff;
+}
+body {
+	background-color: #ffe066;
+	justify-content: center;
+}
+h1 {
+	padding-top: 20px;
+	margin-left: 80px;
+	color: blue;
+}
+button:hover {
+	background-color: rgb(57, 243, 72);
+}
+button:focus {
+	color: red;
+}
